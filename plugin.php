@@ -1,5 +1,6 @@
 <?php
 define('SOUNDCLOUD_PLUGIN_VERSION', '0.1');
+require_once(HELPERS);
 
 #@TODO: Add MVC implementation
 #@TODO: Check out array-to-XML parsers
