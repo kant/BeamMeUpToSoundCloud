@@ -42,13 +42,13 @@ function soundcloud_admin_append_to_items_form_files() {
 	<span><b>Upload to SoundCloud</b></span>
 	<input type="hidden" name="PostToSoundCloudBool" value="0">
 	<input type="checkbox" name="PostToSoundCloudBool" value="1" <?php if(get_option('post_to_soundcloud_default_bool') == '1') {echo 'checked';} ?>>
-	<div><em>Note that if this boxw is checked, saving the item may take a while.</em></div>
+	<div><em>Note: Checking this box will increase the item's upload time.</em></div>
 	<!--TODO: Must files be uniquely named? If, so warn here -->
 	</br>
 	<span><b>Make Public on SoundCloud</b></span>
 	<input type="hidden" name="SoundCloudPublicBool" value="0">
 	<input type="checkbox" name="SoundCloudPublicBool" value="1" <?php if(get_option('soundcloud_public_default_bool') == '1') {echo 'checked';} ?>/>
-	<div><em>If you index your item, it will appear on the results of search engines such as Google's.</em></div>
+	<div><em>If you index your item, it will appear in search engine results.</em></div>
 	</br>
 	</br>
 

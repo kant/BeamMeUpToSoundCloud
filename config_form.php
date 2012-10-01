@@ -129,26 +129,26 @@
 		
 		<div id="loggedIn">
 			<h2>You have logged in. Your token is <?php echo get_option('access_token') ?></h2>
-			<h3>If you would like to log in with a different SoundCloud app, you must uninstall this plugin and recreate it with this different different app.</h3>
+			<h3>If you would like to log in with a different SoundCloud application, uninstall this plugin and reinstall it using the other application's credentials.</h3>
 		</div>
 		
 		<div id="stepOne">
 	
-			<h2>Step-by-step Setup</h2>
-			<h3>Your organization should use its own SoundCloud account for this plugin. If it does not have one, it can sign up for one <a href= "http://soundcloud.com">here</a>. <b>Do not user any personal SoundCloud account</b>.</h3>
+			<h2>Step-By-Step Setup</h2>
+			<h3>You must have a SoundCloud account to use this plugin. If you do not have one, sign up for one <a href= "http://soundcloud.com">here</a>.</h3>
 			<br/>
 			<br/>
-			<h3>Step 1: Go to your <a target="_blank" href="http://soundcloud.com/you/apps">SoundCloud apps page</a></h3>
-			<h3>Step 2: Hit the button to register a new application</h3>
-			<h3>Step 3: Name the app something sensible, like YourOrganizationNameOmeka</h3>
-			<h3>Step 4: In the Return URI enter this address:</h3>
+			<h3>Step 1: Go to your <a target="_blank" href="http://soundcloud.com/you/apps">SoundCloud applications page</a>.</h3>
+			<h3>Step 2: Select the "Register a new application" button.</h3>
+			<h3>Step 3: Name the app something recognizable (e.g., YourOrganizationNameOmeka), and click "Register".</h3>
+			<h3>Step 4: In the Return URI field enter the following address:</h3>
 			<br/>
 			<br/>
 			<div><?php echo get_option('redirect_uri'); ?></div>
 			<br/>			
 			<br/>
-			<h3>Step 5: Hit the Save App button on the SoundCloud page.</h3>
-			<h3 id="setOptionField">Step 6: Enter your client id here:
+			<h3>Step 5: Click the "Save app" button on the SoundCloud page.</h3>
+			<h3 id="setOptionField">Step 6: Enter your Client ID here:
 				<input type="text" name="clientIdOne" id="clientIdOne" size='35'>
 			</h3>
 			<h3><?php echo WEB_PLUGIN ?></h3>
@@ -156,38 +156,38 @@
 			<h3>Step 7: Log onto SoundCloud:<a onClick="getCode()">Click Here</a></h3>-->
 			<br/>			
 			<br/>			
-			<h3><b>Do not worry. You can save after you follow the all the steps.</b></h3>
+			<h3><b>Don't worry. You will be able to save after you follow all the steps.</b></h3>
 		</div>
 		
 		<div id="stepTwo">
 			
-			<h2>Step-by-step Setup (cont.)</h2>
+			<h2>Step-By-Step Setup (cont.)</h2>
 
-			<h3>Step 8: Enter your client id again here:
+			<h3>Step 8: Enter your Client ID again here:
 				<input type="text" name="clientIdTwo" id="clientIdTwo" size='35'>
 			</h3>
-			<h3>Step 9: Enter your client secret here:
+			<h3>Step 9: Enter your Client Secret here:
 				<input type="text" name="clientSecretTwo" id="clientSecretTwo" size='35'>
 			</h3>
 			<h3>Step 10: Click <b><a onClick="getToken()">here</a></b>.</h3>
 			<br/>			
 			<br/>			
-			<h3><b>Do not worry. You can save after you follow the all the steps.</b></h3>
+			<h3><b>Don't worry. You will be able to save after you follow all the steps.</b></h3>
 						
 		</div>
 		
 		<div id="stepThree">
-			<h2>Step-by-step Setup (cont.)</h2>
-			<h3>Step 11: Set options:</h3>
-			<span><b>Upload to Soundcloud By Default</b></span>
+			<h2>Step-By-Step Setup (cont.)</h2>
+			<h3>Step 11: Setup your default upload options:</h3>
+			<span><b>Upload to SoundCloud By Default</b></span>
 			<input type="hidden" name="postToSoundCloudDefaultBool" value="0">
 			<input type="checkbox" name="postToSoundCloudDefaultBool" id="postToSoundCloudDefaultBool" value="1" <?php if(get_option('post_to_soundcloud_default_bool') == '1') {echo 'checked';} ?>/>
-			<div>You can change this option on a per-item basis</div>
+			<div>You can change this option on a per-item basis.</div>
 			<br/>
-			<span><b>Make Public on Soundcloud By Default</b></span>
+			<span><b>Make Public on SoundCloud By Default</b></span>
 			<input type="hidden" name="soundCloudPublicDefaultBool" value="0">
 			<input type="checkbox" name="soundCloudPublicDefaultBool" id="soundCloudPublicDefaultBool" value="1" <?php if(get_option('soundcloud_public_default_bool') == '1') {echo 'checked';} ?>/>
-			<div>You can change this option on a per-item basis</div>
+			<div>You can change this option on a per-item basis.</div>
 			<br/>			
 			<br/>			
 			<h3>Step 12: Hit the Save Changes button below:</h3>
