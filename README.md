@@ -198,7 +198,7 @@ Copyright
 [4]: https://github.com/popuparchive/BeamMeUpToSoundCloud/Issues "GitHub BeamMeUpToSoundCloud"
 [5]: http://www.cecill.info/licences/Licence_CeCILL_V2-en.html "CeCILL"
 [6]: https://www.gnu.org/licenses/gpl-3.0.html "GNU/GPL"
-[7]: http://www.opensource.org/licenses/mit-license.php MIT "MIT"
+[7]: http://www.opensource.org/licenses/mit-license.php "MIT"
 [8]: http://github.com/Daniel-KM "Daniel Berthereau"
 [9]: http://github.com/dvizzini "Daniel Vizzini"
 [10]: http://popuparchive.org/ "Pop Up Archive"
