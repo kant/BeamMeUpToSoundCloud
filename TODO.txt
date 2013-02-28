@@ -1,0 +1,15 @@
+TODO for "Beam me up to SoundCloud" (plugin for Omeka)
+============================================================
+
+* Copy implementation from "Beam me up to Internet Archive"
+
+
+Old todo
+--------
+
+* Add MVC implementation
+* Check out array-to-XML parsers
+* Check OAIPMH harverster plugin for code that loads status to db, see indexcontroller.php #jobdispatcher to get onto other thread
+* Look at paths.php for better way to get file path
+* make jQuery in config_form.php work
+* bind jQuery to "Add Item" and "Save Changes" buttons to confirm upload

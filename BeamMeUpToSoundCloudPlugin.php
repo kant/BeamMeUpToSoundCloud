@@ -4,7 +4,7 @@
  *
  * @see README.md
  *
- * @copyright Daniel Berthereau for Pop Up Archive, 2012
+ * @copyright Daniel Berthereau for Pop Up Archive, 2012-2013
  * @copyright Daniel Vizzini for Pop Up Archive, 2012
  * @license http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
@@ -13,13 +13,6 @@
  * Contains SoundCloud library:
  * @see libraries/SoundCloud
  * @see https://github.com/mptre/php-soundcloud
- * 
- * @todo Add MVC implementation
- * @todo Check out array-to-XML parsers
- * @todo Check OAIPMH harverster plugin for code that loads status to db , see indexcontroller.php #jobdispatcher to get onto other thread 
- * @todo Look at paths.php for better way to get file path
- * @todo make jQuery in config_form.php work 
- * @todo bind jQuery to "Add Item" and "Save Changes" buttons to confirm upload 
  */
 
 /**
@@ -134,13 +127,15 @@ class BeamMeUpToSoundCloudPlugin extends Omeka_Plugin_AbstractPlugin
      *
      * @return void
      */
-    public function hookConfig()
+    public function hookConfig($args)
     {
-        set_option('beamsc_post_to_soundcloud', $_POST['BeamscPostToSoundCloud']);
-        set_option('beamsc_share_on_soundcloud', $_POST['BeamscShareOnSoundCloud']);
-        set_option('beamsc_client_id', $_POST['clientIdTwo']);
-        set_option('beamsc_client_secret', $_POST['clientSecretTwo']);
-        set_option('beamsc_access_token', $_POST['accessToken']);
+        $post = $args['post'];
+
+        set_option('beamsc_post_to_soundcloud', $post['BeamscPostToSoundCloud']);
+        set_option('beamsc_share_on_soundcloud', $post['BeamscShareOnSoundCloud']);
+        set_option('beamsc_client_id', $post['clientIdTwo']);
+        set_option('beamsc_client_secret', $post['clientSecretTwo']);
+        set_option('beamsc_access_token', $post['accessToken']);
     }
 
     /**
@@ -153,7 +148,9 @@ class BeamMeUpToSoundCloudPlugin extends Omeka_Plugin_AbstractPlugin
      */
     public function hookAfterSaveItem($args)
     {
-        if ($_POST['BeamscPostToSoundCloud'] == '1') {
+        $post = $args['post'];
+
+        if (isset($post['BeamscPostToSoundCloud']) && ($post['BeamscPostToSoundCloud'] == '1')) {
             $item = $args['record'];
 
             // Beam up files only if there are files. 

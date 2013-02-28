@@ -188,7 +188,7 @@ Copyright
 
 * Copyright Daniel Vizzini for Pop Up Archive, 2012
 * Copyright Dave Lester for Pop Up Archive, 2012
-* Copyright Daniel Berthereau for Pop Up Archive, 2012
+* Copyright Daniel Berthereau for Pop Up Archive, 2012-2013
 * Copyright Anton Lindqvist, 2012 [php-soundcloud library][3].
 
 
