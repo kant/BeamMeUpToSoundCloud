@@ -78,7 +78,7 @@ public key, and then saves this key in Omeka’s persistent memory. This public
 key is then passed to the Internet Archive in the headers of the HTTP PUT.
 
 In the case of SoundCloud, OAuth authentication is used. Users are prompted to
-log into SoundCloud on installation, and then soundcloud sends a token back to
+log into SoundCloud on installation, and then SoundCloud sends a token back to
 the plugin. This token is saved in Omeka’s persistent memory and sent in the
 header of an HTTP POST request to authenticate tracks that are posted to
 SoundCloud.
